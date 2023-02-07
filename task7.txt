@@ -1,0 +1,81 @@
+1.Get all the countries from the Asia continent /region using the Filter function
+
+function printData(data) 
+{
+  
+          let popu = data.filter(function (e) {
+            return e.region =='Asia';
+        });
+        console.log(popu);
+       
+    }
+
+fetch('https://restcountries.com/v3.1/all')
+.then((response) => response.json())
+.then((res) => printData(res)); 
+______________________________________________________________________________________________
+2.Get all the countries with a population of less than 2 lakhs using Filter function
+function printData(data) 
+{
+  
+          let popu = data.filter(function (e) {
+            return e.population < 2000000;
+        });
+        console.log(popu);
+       
+    }
+
+fetch('https://restcountries.com/v3.1/all')
+.then((response) => response.json())
+.then((res) => printData(res)); 
+-------------------------------------------------------------------------------------------------------
+3.Print the following details name, capital, flag using forEach function
+
+function printData(data) {
+ 
+    data.forEach(function (e) 
+    {
+        
+        return e.namee.capital,e.flag;
+    });
+      console.log(name.common,capital,flag.svg);
+  }
+
+fetch('https://restcountries.com/v3.1/all')
+.then((response) => response.json())
+.then((res) => printData(res)); 
+________________________________________________________________________________________________________
+4.Print the total population of countries using reduce function
+function printData(data) 
+{
+  
+          let popu = data.filter(function (e) {
+            return e.population ;
+       
+        
+          });
+          let sum = population.reduce((t,n) => t + n); 
+        console.log(sum);
+       
+    }
+
+
+fetch('https://restcountries.com/v3.1/all')
+.then((response) => response.json())
+.then((res) => printData(res)); 
+-----------------------------------------------------------------------------------------------------------------
+5.Print the country which uses US Dollars as currency.
+
+ffunction printData(data) 
+{
+  
+          let popu = data.filter(function (e) {
+            return e.currencies='US Dollars';
+        });
+        console.log(popu);
+       
+    }
+
+fetch('https://restcountries.com/v3.1/all')
+.then((response) => response.json())
+.then((res) => printData(res)); 
