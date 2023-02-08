@@ -48,14 +48,18 @@ ________________________________________________________________________________
 4.Print the total population of countries using reduce function
 function printData(data) 
 {
-  
-          let popu = data.filter(function (e) {
-            return e.population ;
-       
-        
-          });
-          let sum = population.reduce((t,n) => t + n); 
-        console.log(sum);
+ 
+          var result=data.reduce((acc,element)=>
+
+          {
+            if(typeof acc==='Object')
+          {
+          return acc.population+element.population
+        }
+        return acc+element.population;
+    });
+        console.log(result);
+    }
        
     }
 
